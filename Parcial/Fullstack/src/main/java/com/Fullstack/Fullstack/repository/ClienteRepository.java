@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
-    List<Cliente> findByRunAndDv_run(Long run, String dv_run);
+    List<Cliente> findByRunAndDvrun(Long run, String dvrun);
 
     List<Cliente> findByNombreAndApellido(String nombre, String apellido);
 
