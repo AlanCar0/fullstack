@@ -11,8 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
     @Id
-    @Column (length = 10)
-    private String run;
+    private long run;
+    @Column (nullable = false, length = 1)
+    private String dv_run;
 
     @Column (nullable = false, length = 50)
     private String nombre;
