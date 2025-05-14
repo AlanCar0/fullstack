@@ -26,10 +26,8 @@ public class ClienteService {
         return clienteRepository.save(cliente);
     }
 
-    public void delete(Long run) {
+    public String delete(Long run) {
         clienteRepository.deleteById(run);
+        return "Cliente eliminado";
     }
-    
-
-
 }

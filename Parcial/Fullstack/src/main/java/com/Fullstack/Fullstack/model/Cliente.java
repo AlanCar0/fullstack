@@ -12,18 +12,19 @@ import lombok.NoArgsConstructor;
 public class Cliente {
     @Id
     private long run;
-    @Column (nullable = false, length = 1)
+
+    @Column (nullable = false)
     private String dvrun;
 
-    @Column (nullable = false, length = 50)
+    @Column (nullable = false)
     private String nombre;
-    @Column (nullable = false, length = 50)
+    @Column (nullable = false)
     private String apellido;
-    @Column (nullable = false, name = "FECHA_NACIMIENTO",length = 10)
+    @Column (nullable = false, name = "FECHA_NACIMIENTO")
     private String fec_naciemiento;
-    @Column (nullable = false,length = 50)
+    @Column (nullable = false)
     private String email;
-    @Column (nullable = false, length = 50)
+    @Column (nullable = false)
     private String direccion;
 
 }
