@@ -11,11 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
     @Id
-    private long run;
-
-    @Column (nullable = false)
-    private String dvrun;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Para generar un ID único automáticamente
+    private Long id;
+    @Column (nullable = false, unique = true)
+    private String run;  
     @Column (nullable = false)
     private String nombre;
     @Column (nullable = false)
