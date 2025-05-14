@@ -15,5 +15,4 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {  // Us
     // List<Cliente> findByNombreAndApellidoAndEmail(String nombre, String apellido, String email);
     // List<Cliente> findByNombreAndApellido(String nombre, String apellido);
 
-    void deleteByRun(long run);  // Mantén si lo necesitas específicamente
 }

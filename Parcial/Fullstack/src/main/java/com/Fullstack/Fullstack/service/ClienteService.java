@@ -1,10 +1,13 @@
 package com.Fullstack.Fullstack.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
 import com.Fullstack.Fullstack.model.Cliente;
 import jakarta.transaction.Transactional;
 import com.Fullstack.Fullstack.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 
@@ -18,16 +21,30 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public Cliente getClienteById(Long run) {
-        return clienteRepository.findById(run).orElse(null);
+    public Cliente getClienteById(Long id) {
+        return clienteRepository.findById(id).orElse(null);
     }
 
     public Cliente save(Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
-    public String delete(Long run) {
-        clienteRepository.deleteById(run);
+    public String delete(Long id) {
+        clienteRepository.deleteById(id);
         return "Cliente eliminado";
+    }
+    public Cliente updateCliente(Long id, Cliente cliente) {
+    Cliente existingCliente = clienteRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente no encontrado"));
+
+    // Actualiza los campos necesarios (¡CUIDADO con seguridad!  No actualizar todo ciegamente)
+        existingCliente.setNombre(cliente.getNombre());
+        existingCliente.setApellido(cliente.getApellido());
+        existingCliente.setEmail(cliente.getEmail());
+        existingCliente.setDireccion(cliente.getDireccion());
+        existingCliente.setRun(cliente.getRun());
+        existingCliente.setFec_naciemiento(cliente.getFec_naciemiento());
+
+        return clienteRepository.save(existingCliente);
     }
 }
