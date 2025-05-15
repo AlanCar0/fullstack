@@ -21,8 +21,8 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public Cliente getClienteById(Long id) {
-        return clienteRepository.findById(id)
+    public Cliente getClienteById(Long id_cliente) {
+        return clienteRepository.findById(id_cliente)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente no encontrado"));
     }
 
@@ -30,12 +30,12 @@ public class ClienteService {
         return clienteRepository.save(cliente);
     }
 
-    public String delete(Long id) {
-        clienteRepository.deleteById(id);
+    public String delete(Long id_cliente) {
+        clienteRepository.deleteById(id_cliente);
         return "Cliente eliminado";
     }
-    public Cliente updateCliente(Long id, Cliente cliente) {
-    Cliente existingCliente = clienteRepository.findById(id)
+    public Cliente updateCliente(Long id_cliente, Cliente cliente) {
+    Cliente existingCliente = clienteRepository.findById(id_cliente)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente no encontrado"));
 
     // Actualiza los campos necesarios (¡CUIDADO con seguridad!  No actualizar todo ciegamente)

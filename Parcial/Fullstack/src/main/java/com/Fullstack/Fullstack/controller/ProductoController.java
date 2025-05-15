@@ -28,19 +28,19 @@ public class ProductoController {
     }
 
     @GetMapping("/{id}")  // Usa 'id'
-    public Producto getProductoById(@PathVariable Long id) {  // Usa 'id'
-        return productoService.getProductoById(id);
+    public Producto getProductoById(@PathVariable Long id_producto) {  // Usa 'id'
+        return productoService.getProductoById(id_producto);
     }
 
     @DeleteMapping("/{id}")  // Usa 'id'
-    public ResponseEntity<Void> deleteProducto(@PathVariable Long id) {  // Usa 'id'
-        productoService.delete(id);
+    public ResponseEntity<Void> deleteProducto(@PathVariable Long id_producto) {  // Usa 'id'
+        productoService.delete(id_producto);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")  // Usa 'id'
-    public Producto updateProducto(@PathVariable Long id, @RequestBody Producto producto) {  // Usa 'id'
-        return productoService.updateProducto(id, producto);
+    public Producto updateProducto(@PathVariable Long id_producto, @RequestBody Producto producto) {  // Usa 'id'
+        return productoService.updateProducto(id_producto, producto);
     }
 
     @ExceptionHandler(ResponseStatusException.class)
