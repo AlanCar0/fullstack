@@ -5,14 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.Fullstack.Fullstack.model.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> {  // Usando Long para el ID
-
-    // JpaRepository ya tiene:
-    // findAll(), findById(), save(), deleteById()
-
-    // Mantenlos SOLO si los necesitas:
-    // List<Cliente> findByRunAndDvrun(Long run, String dvrun);
-    // List<Cliente> findByNombreAndApellidoAndEmail(String nombre, String apellido, String email);
-    // List<Cliente> findByNombreAndApellido(String nombre, String apellido);
-
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+    //  JpaRepository<Cliente, Long>  <---  El 'Long' aquí debe coincidir con el tipo de 'id' en Cliente.java
 }
