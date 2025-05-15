@@ -27,18 +27,18 @@ public class CarritoController {
         return carritoService.save(carrito);
     }
 
-    @GetMapping("/{id}")  // Usa 'id'
+    @GetMapping("/{id_carrito}")  // Usa 'id'
     public Carrito getCarritoById(@PathVariable Long id_carrito) {  // Usa 'id'
         return carritoService.getCarritoById(id_carrito);
     }
 
-    @DeleteMapping("/{id}")  // Usa 'id'
+    @DeleteMapping("/{id_carrito}")  // Usa 'id'
     public ResponseEntity<Void> deleteCarrito(@PathVariable Long id_carrito) {  // Usa 'id'
         carritoService.delete(id_carrito);
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{id}")  // Usa 'id'
+    @PutMapping("/{id_carrito}")  // Usa 'id'
     public Carrito updateCarrito(@PathVariable Long id_carrito, @RequestBody Carrito carrito) {  // Usa 'id'
         return carritoService.updateCarrito(id_carrito, carrito);
     }

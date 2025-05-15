@@ -28,18 +28,18 @@ public class ClienteController {
         return clienteService.save(cliente);
     }
 
-    @GetMapping("/{id}")  // Usa 'id'
+    @GetMapping("/{id_cliente}")  // Usa 'id'
     public Cliente getClienteById(@PathVariable Long id_cliente) {  // Usa 'id'
         return clienteService.getClienteById(id_cliente);
     }
 
-    @DeleteMapping("/{id}")  // Usa 'id'
+    @DeleteMapping("/{id_cliente}")  // Usa 'id'
     public ResponseEntity<Void> deleteCliente(@PathVariable Long id_cliente) {  // Usa 'id'
         clienteService.delete(id_cliente);
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{id}")  // Usa 'id'
+    @PutMapping("/{id_cliente}")  // Usa 'id'
     public Cliente updateCliente(@PathVariable Long id_cliente, @RequestBody Cliente cliente) {  // Usa 'id'
         return clienteService.updateCliente(id_cliente, cliente);
     }

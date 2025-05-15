@@ -27,18 +27,18 @@ public class ProductoController {
         return productoService.save(producto);
     }
 
-    @GetMapping("/{id}")  // Usa 'id'
+    @GetMapping("/{id_producto}")  // Usa 'id'
     public Producto getProductoById(@PathVariable Long id_producto) {  // Usa 'id'
         return productoService.getProductoById(id_producto);
     }
 
-    @DeleteMapping("/{id}")  // Usa 'id'
+    @DeleteMapping("/{id_producto}")  // Usa 'id'
     public ResponseEntity<Void> deleteProducto(@PathVariable Long id_producto) {  // Usa 'id'
         productoService.delete(id_producto);
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{id}")  // Usa 'id'
+    @PutMapping("/{id_producto}")  // Usa 'id'
     public Producto updateProducto(@PathVariable Long id_producto, @RequestBody Producto producto) {  // Usa 'id'
         return productoService.updateProducto(id_producto, producto);
     }
