@@ -29,23 +29,24 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")  // Usa 'id'
-    public Cliente getClienteById(@PathVariable Long id) {  // Usa 'id'
-        return clienteService.getClienteById(id);
+    public Cliente getClienteById(@PathVariable Long id_cliente) {  // Usa 'id'
+        return clienteService.getClienteById(id_cliente);
     }
 
     @DeleteMapping("/{id}")  // Usa 'id'
-    public ResponseEntity<Void> deleteCliente(@PathVariable Long id) {  // Usa 'id'
-        clienteService.delete(id);
+    public ResponseEntity<Void> deleteCliente(@PathVariable Long id_cliente) {  // Usa 'id'
+        clienteService.delete(id_cliente);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")  // Usa 'id'
-    public Cliente updateCliente(@PathVariable Long id, @RequestBody Cliente cliente) {  // Usa 'id'
-        return clienteService.updateCliente(id, cliente);
+    public Cliente updateCliente(@PathVariable Long id_cliente, @RequestBody Cliente cliente) {  // Usa 'id'
+        return clienteService.updateCliente(id_cliente, cliente);
     }
 
         @ExceptionHandler(ResponseStatusException.class)
         public ResponseEntity<String> handleNotFound(ResponseStatusException ex) {
             return ResponseEntity.status(ex.getStatusCode()).body(ex.getReason());
         }
+    
 }

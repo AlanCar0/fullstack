@@ -22,8 +22,8 @@ public class ProductoService {
         return productoRepository.findAll();
     }
 
-    public Producto getProductoById(Long id) {
-        return productoRepository.findById(id)
+    public Producto getProductoById(Long id_producto) {
+        return productoRepository.findById(id_producto)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto no encontrado"));
     }
 
@@ -31,13 +31,13 @@ public class ProductoService {
         return productoRepository.save(producto);
     }
 
-    public String delete(Long id) {
-        productoRepository.deleteById(id);
+    public String delete(Long id_producto) {
+        productoRepository.deleteById(id_producto);
         return "Producto eliminado";
     }
     
-    public Producto updateProducto(Long id, Producto producto) {
-        Producto existingProducto = productoRepository.findById(id)
+    public Producto updateProducto(Long id_producto, Producto producto) {
+        Producto existingProducto = productoRepository.findById(id_producto)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto no encontrado"));
 
         // Actualiza los campos necesarios (¡CUIDADO con seguridad!  No actualizar todo ciegamente)
