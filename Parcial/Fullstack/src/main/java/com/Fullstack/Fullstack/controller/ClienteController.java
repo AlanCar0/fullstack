@@ -12,7 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Cliente")
+@RequestMapping("/api/cliente")
 public class ClienteController {
 
     @Autowired
@@ -44,8 +44,8 @@ public class ClienteController {
         return clienteService.updateCliente(id, cliente);
     }
 
-    @ExceptionHandler(ResponseStatusException.class)
-    public ResponseEntity<String> handleNotFound(ResponseStatusException ex) {
-        return ResponseEntity.status(ex.getStatusCode()).body(ex.getReason());
-    }
+        @ExceptionHandler(ResponseStatusException.class)
+        public ResponseEntity<String> handleNotFound(ResponseStatusException ex) {
+            return ResponseEntity.status(ex.getStatusCode()).body(ex.getReason());
+        }
 }
