@@ -1,5 +1,6 @@
 drop table CLIENTE cascade constraint;
 drop table PRODUCTO cascade constraint;
+drop table CARRITO cascade constraint;
 
 -- Insertar datos en la tabla CLIENTE
 INSERT INTO CLIENTE (run, nombre, apellido, fecha_nacimiento, email, direccion)
@@ -93,6 +94,37 @@ VALUES ('Perfume Exótico', 'Combinación única de frutas tropicales', 22990, 3
 
 INSERT INTO producto (nombre, descripcion, precio, stock)
 VALUES ('Perfume Clásico', 'Inspirado en fragancias tradicionales europeas', 18990, 55);
+
+/* Datos Carro */
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (1, 'Esencia floral de primavera en frasco de cristal', 14990);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (2, 'Aroma intenso de madera oriental y vainilla', 25980);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (1, 'Fragancia cítrica de verano con notas de bergamota', 12990);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (3, 'Colección exclusiva: musk profundo y canela dulce', 44970);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (1, 'Perfume de noche: jazmín oscuro y sándalo', 17990);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (2, 'Dúo aromático de lavanda silvestre y romero', 31980);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (1, 'Edición limitada: perfume de rosas negras', 19990);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (4, 'Set familiar: frescura marina con fondo de ámbar', 59960);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (2, 'Aromas cítricos con notas verdes de bosque húmedo', 26980);
+
+INSERT INTO carrito (CANT_PRODUCTO, descripcion_carrito, precio_carrito) 
+VALUES (1, 'Fragancia clásica: elegancia de almizcle y cuero', 15990);
 
 
 COMMIT;
