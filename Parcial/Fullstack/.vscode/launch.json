@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FullstackApplication<Fullstack>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Fullstack.Fullstack.FullstackApplication",
+            "projectName": "Fullstack",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
