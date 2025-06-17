@@ -49,7 +49,7 @@ public class CarritoServiceTest {
         Carrito carrito = new Carrito();
         when(carritoRepository.save(carrito)).thenReturn(carrito);
 
-        Carrito savedCarrito = carritoService.saveCarrito(carrito); // Usa el nombre correcto del método
+        Carrito savedCarrito = carritoService.save(carrito); // Usa el nombre correcto del método
         assertNotNull(savedCarrito);
     }
 
@@ -58,7 +58,7 @@ public class CarritoServiceTest {
         Long id = 1L;
         doNothing().when(carritoRepository).deleteById(id);
 
-        String response = carritoService.deleteCarrito(id); // Usa el nombre correcto del método
+        String response = carritoService.delete(id); // Usa el nombre correcto del método
         assertEquals("Carrito eliminado", response);
     }
 
