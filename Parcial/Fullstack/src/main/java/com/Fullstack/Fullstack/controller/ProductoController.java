@@ -3,6 +3,8 @@ package com.Fullstack.Fullstack.controller;
 import com.Fullstack.Fullstack.model.Producto;
 import com.Fullstack.Fullstack.service.ProductoService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/producto")
+@Tag(name = "Producto", description = "Operaciones relacionadas con productos")
 public class ProductoController {
     @Autowired
     private ProductoService productoService;

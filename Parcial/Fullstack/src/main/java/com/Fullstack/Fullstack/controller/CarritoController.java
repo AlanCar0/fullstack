@@ -3,6 +3,8 @@ package com.Fullstack.Fullstack.controller;
 import com.Fullstack.Fullstack.model.Carrito;
 import com.Fullstack.Fullstack.service.CarritoService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/carrito")
+@Tag(name = "Carrito", description = "Operaciones relacionadas con carritos")
 public class CarritoController {
     @Autowired
     private CarritoService carritoService;

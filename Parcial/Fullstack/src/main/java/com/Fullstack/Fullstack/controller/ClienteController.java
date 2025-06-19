@@ -3,6 +3,8 @@ package com.Fullstack.Fullstack.controller;
 import com.Fullstack.Fullstack.model.Cliente;
 import com.Fullstack.Fullstack.service.ClienteService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cliente")
+@Tag(name = "Cliente", description = "Operaciones relacionadas con clientes")
 public class ClienteController {
 
     @Autowired

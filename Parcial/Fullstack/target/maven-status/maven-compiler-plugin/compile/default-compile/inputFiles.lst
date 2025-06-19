@@ -1,0 +1,13 @@
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/FullstackApplication.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/controller/CarritoController.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/controller/ClienteController.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/controller/ProductoController.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/model/Carrito.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/model/Cliente.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/model/Producto.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/repository/CarritoRepository.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/repository/ClienteRepository.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/repository/ProductoRepository.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/service/CarritoService.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/service/ClienteService.java
+/Users/alancaro/Desktop/fullstack/Parcial/Fullstack/src/main/java/com/Fullstack/Fullstack/service/ProductoService.java

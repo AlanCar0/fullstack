@@ -1,0 +1,13 @@
+com/Fullstack/Fullstack/controller/ProductoController.class
+com/Fullstack/Fullstack/model/Cliente.class
+com/Fullstack/Fullstack/FullstackApplication.class
+com/Fullstack/Fullstack/controller/ClienteController.class
+com/Fullstack/Fullstack/service/CarritoService.class
+com/Fullstack/Fullstack/repository/CarritoRepository.class
+com/Fullstack/Fullstack/service/ProductoService.class
+com/Fullstack/Fullstack/service/ClienteService.class
+com/Fullstack/Fullstack/controller/CarritoController.class
+com/Fullstack/Fullstack/repository/ClienteRepository.class
+com/Fullstack/Fullstack/model/Producto.class
+com/Fullstack/Fullstack/repository/ProductoRepository.class
+com/Fullstack/Fullstack/model/Carrito.class
